@@ -1,4 +1,4 @@
 <view >
-  <canvas  class="myCanvas" canvas-id="myCanvas" style="height:300px;;width:100%;"/>
-  <button bind:tap="savePic">保存至相册</button>
+  <canvas  class="myCanvas" canvas-id="myCanvas" style="height:998rpx;width:671rpx;"/>
+  <button bind:tap="savePic">保存图片，分享到朋友圈</button>
 </view>

@@ -1,23 +1,36 @@
 .container{
-  height:300px;
+  height:998rpx;
   width:100%;
 }
 .bg{
   position: absolute;
   z-index:0;
-  height: 300px;
-  width:300px;
+  width:671rpx;
+  height:998rpx;
 }
 button{
   margin-top:10px;
 
 }
 .hat{ 
-  height: 100px;
-  width: 100px;
+  height: 360rpx;
+  width: 360rpx;
   position: absolute;
   border: dashed 2px yellow;
-  top:100px;
+  top:260rpx;
+  left: 215rpx;
+  color: black;
+  /* transform: rotate({{rotate+'deg'}}) scale({{scale}}); */
+}
+.usrname{
+  position: absolute;
+  padding: 12rpx 0 12rpx 0;
+  width: 300rpx;
+  top:670rpx;
+  left:245rpx;
+  border: dashed 2px yellow;
+  border-radius: 4px;
+  text-align: center;
 }
 .handle,.cancel{
   position: absolute;

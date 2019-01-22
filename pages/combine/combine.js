@@ -30,16 +30,17 @@ Page({
     let hat_center_x = app.globalData.hat_center_x;
     let hat_center_y = app.globalData.hat_center_y;
     let currentHatId = app.globalData.currentHatId;
+    let usrname = app.globalData.usrname;
     const pc = wx.createCanvasContext('myCanvas');
     const windowWidth = wx.getSystemInfoSync().windowWidth;
     const hat_size = 100 * scale;
 
 
     pc.clearRect(0, 0, windowWidth, 300);
-    pc.drawImage(this.bgPic, windowWidth / 2 - 150, 0, 300, 300);
+    pc.drawImage("../../image/" + currentHatId + ".png", windowWidth / 2 - 150, 0, 300, 300);
     pc.translate(hat_center_x,hat_center_y);
     pc.rotate(rotate * Math.PI / 180);
-    pc.drawImage("../../image/" + currentHatId + ".png", -hat_size / 2, -hat_size / 2, hat_size, hat_size);
+    pc.drawImage(this.bgPic, -hat_size / 2, -hat_size / 2, hat_size, hat_size);
     pc.draw();
   },
   savePic() {

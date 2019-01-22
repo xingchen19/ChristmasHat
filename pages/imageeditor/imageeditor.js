@@ -5,8 +5,9 @@ const app = getApp()
 Page({
   data: {
     bgPic:null,
-    imgList:[1,2,3,4,5,6,7,8,9,10],
-    currentHatId:1,
+    imgList:[11],
+    currentHatId:11,
+    usrname: null,
 
     hatCenterX:wx.getSystemInfoSync().windowWidth/2,
     hatCenterY:150,
@@ -105,8 +106,11 @@ Page({
       this.start_x=current_x;
       this.start_y=current_y;
   },
-  
 
+  nameInput(e){
+    this.data.usrname = e.detail.value;
+  },
+  
   chooseImg(e){
     console.log(e);
     this.setData({
@@ -119,6 +123,7 @@ Page({
     app.globalData.hat_center_x = this.hat_center_x;
     app.globalData.hat_center_y = this.hat_center_y;
     app.globalData.currentHatId = this.data.currentHatId;
+    app.globalData.usrname = this.data.usrname;
     wx.navigateTo({
       url: '../combine/combine',
     })
